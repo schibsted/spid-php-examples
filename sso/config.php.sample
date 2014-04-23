@@ -2,7 +2,7 @@
 
 // Copy this file to a file called config.php and enter your credentials
 
-require_once("../../../../sdk-php/src/Client.php"); // needed here for constants below
+require_once("../../sdk-php/src/Client.php"); // needed here for constants below
 
 $clientID = <YOUR CLIENT ID>;
 $ourBaseURL = "http://localhost:8181";
