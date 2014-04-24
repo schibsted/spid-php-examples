@@ -7,20 +7,22 @@ The following is a minimal example of using the PHP SDK. It fetches the
 
 ## Usage
 
-First download the sdk-php:
+1. **Download the sdk-php**
 
-```sh
-git clone https://github.com/schibsted/sdk-php.git
-```
+   ```sh
+   git clone https://github.com/schibsted/sdk-php.git
+   ```
 
-To work out of the box, it should be placed next to this repo in the
-folder hierarchy.
+   To work out of the box, it should be placed next to this repo in the
+   folder hierarchy.
 
-Then run the example:
+2. **Run the example**
 
-```sh
-php getting-started.php client-id secret sign-secret
-```
+   ```sh
+   php getting-started.php <client-id> <secret> <sign-secret>
+   ```
+
+   Replace pointy bracketed items with your credentials.
 
 This will print the JSON-decoded response from the server, which shows all
 available endpoints along with details on how to interact with them.
