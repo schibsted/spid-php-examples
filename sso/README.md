@@ -4,26 +4,27 @@ A PHP bare-bones implementation of SSO with SPiD.
 
 ## Usage
 
-First download the sdk-php:
+1. **Download the sdk-php**
 
-```sh
-git clone https://github.com/schibsted/sdk-php.git
-```
+   ```sh
+   git clone https://github.com/schibsted/sdk-php.git
+   ```
 
-To work out of the box, it should be placed next to this repo in the
-folder hierarchy.
+   To work out of the box, it should be placed next to this repo in the
+   folder hierarchy.
 
-Then fix the configuration:
+2. **Fill in the configuration**
 
-```sh
-cd examples/php/sso/
-cp config.php.sample config.php
-```
+   ```sh
+   cd sso
+   cp config.php.sample config.php
+   vim config.php
+   ```
 
-Add your own credentials to the config file.
+   Add your own credentials to the config file.
 
-Then start the server with:
+3. **Start the server**
 
-```sh
-php -S localhost:8181
-```
+   ```sh
+   php -S localhost:8181
+   ```
