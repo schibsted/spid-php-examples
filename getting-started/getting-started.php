@@ -1,3 +1,4 @@
+/** Getting started */
 <?php
 require_once("../../sdk-php/src/Client.php");
 
@@ -16,3 +17,4 @@ $client = new VGS_Client(array(
 
 $client->auth();
 echo var_dump($client->api("/endpoints"));
+/**/
