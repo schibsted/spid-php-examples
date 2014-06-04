@@ -1,0 +1,25 @@
+<?php
+
+// Copy this file to a file called config.php and enter your credentials
+
+require_once("../../sdk-php/src/Client.php"); // needed here for constants below
+
+$clientID = "<YOUR CLIENT ID>";
+$ourBaseURL = "http://localhost:8182";
+$spidBaseURL = "https://stage.payment.schibsted.no";
+
+/** SDK variables */
+$spidClientConfig = array(
+    VGS_Client::CLIENT_ID          => $clientID,
+    VGS_Client::CLIENT_SECRET      => "<YOUR CLIENT SECRET>",
+    VGS_Client::CLIENT_SIGN_SECRET => "<YOUR CLIENT SIGN SECRET>",
+    VGS_Client::STAGING_DOMAIN     => "stage.payment.schibsted.no",
+    VGS_Client::HTTPS              => true,
+    VGS_Client::REDIRECT_URI       => $ourBaseURL . "/createSession.php",
+    VGS_Client::COOKIE             => false,
+    VGS_Client::API_VERSION        => 2,
+    VGS_Client::PRODUCTION         => false
+);
+/**/
+
+?>
