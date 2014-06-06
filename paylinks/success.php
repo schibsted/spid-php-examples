@@ -1,6 +1,7 @@
 <?php
 require_once('./config.php');
 
+/** Order status codes */
 $statuses = array(
    "-3" => "Expired",
    "-2" => "Cancelled",
@@ -11,13 +12,16 @@ $statuses = array(
    "3" => "Credited",
    "4" => "Authorized"
 );
+/**/
 
-/** Create user client */
+/** Create SPiD client */
 $client = new VGS_Client($spidClientConfig);
 $client->auth();
 /**/
 
+/** Fetch order info */
 $order = $client->api('/order/' . $_GET['order_id'] . '/status');
+/**/
 
 function getOrderStatus($status) {
     global $statuses;
