@@ -27,13 +27,18 @@ function getOrderStatus($status) {
     global $statuses;
     return $statuses[$status];
 }
+
+session_start();
+
+$user = $_SESSION['user'];
+
 ?><!DOCTYPE html>
 <html>
   <head>
     <title>Success!</title>
   </head>
   <body>
-    <h1>Success!</h1>
+    <h1>Welcome back, <?php echo $user['displayName'] ?>!</h1>
     <p>
       <?php echo $order['clientReference'] ?> is
       <strong><?php echo getOrderStatus($order['status']) ?></strong>

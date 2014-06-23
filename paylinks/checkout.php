@@ -24,7 +24,7 @@ function getPaylinkItems($params) {
 
 $paylinkData = array(
     'title' => 'Quality movies',
-    'redirectUri' => 'http://localhost:8182/success.php',
+    'redirectUri' => 'http://localhost:8182/callback.php',
     'cancelUri' => 'http://localhost:8182/cancel.php',
     'clientReference' => 'Order number ' . rand(),
     'items' => getPaylinkItems($_POST)
