@@ -23,8 +23,8 @@ A bare-bones PHP implementation of direct payment with SPiD.
 
    Add your own credentials to the config file.
 
-3. **Start the server**
+3. **Run the recurring payments batch process**
 
    ```sh
-   php -S localhost:8183
+   php processPayments.php
    ```
