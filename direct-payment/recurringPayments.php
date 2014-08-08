@@ -17,11 +17,13 @@ function getOrderData($client, $user, $subscription) {
 }
 /**/
 
+/** Attempting the direct payment */
 function chargeUserForSubscription($user, $subscription) {
     global $client;
     $orderData = getOrderData($client, $user, $subscription);
     return $client->api('/user/' . $user['userId'] . '/charge', 'POST', $orderData);
 }
+/**/
 
 /** Payment identifier types */
 $identifiers = array(
@@ -33,6 +35,7 @@ $identifiers = array(
 );
 /**/
 
+/** Preparing order data for the summary */
 function formatOrder($order) {
     global $identifiers;
 
@@ -44,3 +47,4 @@ function formatOrder($order) {
         $identifiers[$order["identifierType"]]
     );
 }
+/**/
