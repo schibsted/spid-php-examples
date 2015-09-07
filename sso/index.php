@@ -4,7 +4,7 @@ require_once('./config.php');
 session_start();
 
 /** Build login URL */
-$spidAuthorizeURL = $spidBaseURL . "/oauth/authorize" .
+$spidAuthorizeURL = $spidBaseURL . "/flow/auth" .
   "?client_id=" . $clientID .
   "&response_type=code" .
   "&redirect_uri=" . $ourBaseURL . "/createSession.php";
