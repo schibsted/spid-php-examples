@@ -1,5 +1,6 @@
 <?php
-require_once('./config.php');
+require_once('../vendor/autoload.php');
+require_once('../config/config.php');
 
 /** Handle callback from SPiD, make sure we've got the right user */
 $client = new VGS_Client($spidClientConfig);

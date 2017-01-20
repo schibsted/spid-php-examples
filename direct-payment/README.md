@@ -4,27 +4,16 @@ A bare-bones PHP implementation of direct payment with SPiD.
 
 ## Usage
 
-1. **Download the sdk-php**
-
-   ```sh
-   git clone https://github.com/schibsted/sdk-php.git
-   ```
-
-   To work out of the box, it should be placed next to this repo in the
-   folder hierarchy.
+1. `composer install` to install dependencies
 
 2. **Fill in the configuration**
 
    ```sh
-   cd direct-payment
+   cd config
    cp config.php.sample config.php
    vi config.php
    ```
 
    Add your own credentials to the config file.
 
-3. **Run the recurring payments batch process**
-
-   ```sh
-   php processPayments.php
-   ```
+3. Start the docker container with `docker-compose up` and go to `http://localhost:8181/direct-payment`.

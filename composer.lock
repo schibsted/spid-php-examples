@@ -1,0 +1,63 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "aae0f3e26ce630bb6d2b41b59093b46c",
+    "packages": [
+        {
+            "name": "schibsted/sdk-php",
+            "version": "2.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/schibsted/sdk-php.git",
+                "reference": "0de3bb743675b9a047294757af3d5d7c3f22e969"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/schibsted/sdk-php/zipball/0de3bb743675b9a047294757af3d5d7c3f22e969",
+                "reference": "0de3bb743675b9a047294757af3d5d7c3f22e969",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/Client.php",
+                    "src/Client/Exception.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Schibsted Payment",
+                    "homepage": "https://github.com/schibsted/sdk-php"
+                }
+            ],
+            "description": "OAuth2 and REST client for connecting and accessing the SPiD API.",
+            "homepage": "https://github.com/schibsted/sdk-php",
+            "keywords": [
+                "SPiD",
+                "api",
+                "oauth2",
+                "php",
+                "rest"
+            ],
+            "time": "2016-11-21T10:45:50+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

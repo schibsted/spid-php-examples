@@ -1,5 +1,6 @@
 <?php
-require_once('./config.php');
+require_once('../vendor/autoload.php');
+require_once('../config/config.php');
 
 /** The entirety of our product catalog right here */
 $products = array(
@@ -24,8 +25,8 @@ function getPaylinkItems($params) {
 
 $paylinkData = array(
     'title' => 'Quality movies',
-    'redirectUri' => 'http://localhost:8182/callback.php',
-    'cancelUri' => 'http://localhost:8182/cancel.php',
+    'redirectUri' => 'http://localhost:8181/callback.php',
+    'cancelUri' => 'http://localhost:8181/cancel.php',
     'clientReference' => 'Order number ' . rand(),
     'items' => getPaylinkItems($_POST)
 );

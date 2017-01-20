@@ -7,28 +7,19 @@ The following is a minimal example of using the PHP SDK. It fetches the
 
 ## Usage with composer
 
-1. **Require the sdk**
-    
-    Run ```composer require schibsted/sdk-php``` and when composer ask you for a version constraint just type in ```dev-master``` to get the latest release. Now, if you already have a project using composer the classes you need will be available to you.
+1. `composer install` to install dependencies
 
-    If you don't use composer for the moment, you will see that composer created a new file called composer.json and downloaded all the files you need to run the next step. Feel free to read more about composer at their webpage for further details about how composer works.
-
-2. **Create and edit the example file**
-
-    Copy the contents of the getting-started.php in this repo and change ```require_once("../../sdk-php/src/Client.php");``` to ```require('vendor/autoload.php');```as this will autoload the files you need.
-
-## Usage
-
-1. **Download the sdk-php**
+2. **Fill in the configuration**
 
    ```sh
-   git clone https://github.com/schibsted/sdk-php.git
+   cd config
+   cp config.php.sample config.php
+   vi config.php
    ```
 
-   To work out of the box, it should be placed next to this repo in the
-   folder hierarchy.
+   Add your own credentials to the config file.
 
-2. **Run the example**
+3. **Run the example**
 
    ```sh
    php getting-started.php <client-id> <secret> <sign-secret>

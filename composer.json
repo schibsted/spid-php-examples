@@ -1,0 +1,9 @@
+{
+    "name": "schibsted/spid-php-examples",
+    "description": "Examples using the SPiD PHP SDK",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "schibsted/sdk-php": "^2.4"
+    }
+}

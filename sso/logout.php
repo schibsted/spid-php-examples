@@ -1,20 +1,13 @@
 <?php
-require_once('./config.php');
+require_once('../vendor/autoload.php');
+require_once('../config/config.php');
 
 /** Log user out */
 session_start();
+unset($_SESSION['user']);
 
-$client = isset($_SESSION['client']) ? $_SESSION['client'] : false;
+$spidClientConfig[VGS_Client::REDIRECT_URI] = "http://{$_SERVER['HTTP_HOST']}/sso/";
+$client = new VGS_Client($spidClientConfig);
 
-if ($client) {
-  unset($_SESSION['client']);
-  unset($_SESSION['user']);
-
-  $spidLogoutURL = $spidBaseURL . "/logout" .
-    "?redirect_uri=" . $ourBaseURL .
-    "&oauth_token=" . $client->getAccessToken();
-
-  header("Location: " . $spidLogoutURL);
-}
-/**/
+header("Location: " . $client->getLogoutURI());
 ?>

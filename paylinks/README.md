@@ -4,31 +4,16 @@ A bare-bones PHP implementation of paylinks with SPiD.
 
 ## Usage
 
-1. **Download the sdk-php**
-
-   ```sh
-   git clone https://github.com/schibsted/sdk-php.git
-   ```
-
-   To work out of the box, it should be placed next to this repo in the
-   folder hierarchy:
-
-   - `dev/`
-     - `sdk-php/`
-     - `spid-php-examples/`
+1. `composer install` to install dependencies
 
 2. **Fill in the configuration**
 
    ```sh
-   cd paylinks
+   cd config
    cp config.php.sample config.php
    vi config.php
    ```
 
    Add your own credentials to the config file.
 
-3. **Start the server**
-
-   ```sh
-   php -S localhost:8182
-   ```
+3. Start the docker container with `docker-compose up` and go to `http://localhost:8181/paylinks`.
