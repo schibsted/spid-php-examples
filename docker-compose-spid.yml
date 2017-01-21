@@ -1,0 +1,19 @@
+version: '2'
+
+networks:
+    platform:
+      external:
+          name: spidplatform_default
+
+services:
+  web:
+    image: php:7.1-apache
+    ports:
+      - "8181:80"
+    volumes:
+      - ./:/var/www/html
+    external_links:
+      - spidplatform_web_1:spp.dev
+    networks:
+      - platform
+      - default
