@@ -1,5 +1,6 @@
 <?php
 
+/** SDK variables */
 $spidClientConfig = [
     VGS_Client::CLIENT_ID          => "<YOUR CLIENT ID>",
     VGS_Client::CLIENT_SECRET      => "<YOUR CLIENT SECRET>",
