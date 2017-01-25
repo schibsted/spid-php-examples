@@ -4,6 +4,7 @@ require_once('../config/config.php');
 
 session_start();
 
+/** Build login URL */
 $spidClientConfig[VGS_Client::REDIRECT_URI] = "http://{$_SERVER['HTTP_HOST']}/sso/";
 $client = new VGS_Client($spidClientConfig);
 

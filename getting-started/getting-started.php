@@ -1,4 +1,5 @@
 <?php
+/** Getting started */
 require_once('../vendor/autoload.php');
 
 $client = new VGS_Client(array(
